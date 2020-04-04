@@ -1,0 +1,34 @@
+{
+  "name": "eslint-traverse",
+  "version": "0.0.0",
+  "description": "Create a sub-traversal of an AST node in your ESLint plugin",
+  "main": "index.js",
+  "author": "Jamie Kyle <jamie.kyle@discordapp.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discord/eslint-traverse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/discord/eslint-traverse/issues"
+  },
+  "homepage": "https://github.com/discord/eslint-traverse#readme",
+  "keywords": [
+    "eslint",
+    "es",
+    "ecmascript",
+    "lint",
+    "linter",
+    "traverse",
+    "visitor",
+    "visit",
+    "walk",
+    "ast",
+    "abstract",
+    "syntax",
+    "tree",
+    "babel",
+    "babylon",
+    "plugin"
+  ]
+}
