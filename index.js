@@ -20,20 +20,24 @@ function traverse(context, node, visitor) {
     let result = visitor(currentPath)
     if (result === STOP) break
     if (result === SKIP) continue
+    
+    let currentNode = currentPath.node
+    if (currentNode == null) continue
 
-    let visitorKeys = allVisitorKeys[currentPath.node.type]
+    let visitorKeys = allVisitorKeys[currentNode.type]
     if (!visitorKeys) continue
 
     for (let visitorKey of visitorKeys) {
-      let child = currentPath.node[visitorKey]
+      let child = currentNode[visitorKey]
 
       if (!child) {
         continue
       } else if (Array.isArray(child)) {
         for (let item of child) {
+          if (item == null) continue
           queue.push({
             node: item,
-            parent: currentPath.node,
+            parent: currentNode,
             parentKey: visitorKey,
             parentPath: currentPath,
           })
@@ -41,7 +45,7 @@ function traverse(context, node, visitor) {
       } else {
         queue.push({
           node: child,
-          parent: currentPath.node,
+          parent: currentNode,
           parentKey: visitorKey,
           parentPath: currentPath,
         })
