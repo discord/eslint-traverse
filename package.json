@@ -1,6 +1,6 @@
 {
   "name": "eslint-traverse",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create a sub-traversal of an AST node in your ESLint plugin",
   "main": "index.js",
   "types": "index.d.ts",
@@ -37,6 +37,14 @@
     "babylon",
     "plugin"
   ],
+  "peerDependencies": {
+    "@types/eslint": "*",
+    "@types/estree": "*"
+  },
+  "peerDependenciesMeta": {
+    "@types/eslint": { "optional": true },
+    "@types/estree": { "optional": true }
+  },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "@types/estree": "^1.0.9"
